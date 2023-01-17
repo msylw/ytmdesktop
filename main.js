@@ -1029,6 +1029,22 @@ async function createWindow() {
                 mediaControl.playPauseTrack(view)
                 break
 
+            case 'media-play':
+                if (infoPlayerProvider.getPlayerInfo().isPaused) {
+                    if (infoPlayerProvider.getTrackInfo().id === '')
+                        infoPlayerProvider.firstPlay(view.webContents)
+                    mediaControl.playPauseTrack(view)
+                }
+                break
+
+            case 'media-pause':
+                if (!infoPlayerProvider.getPlayerInfo().isPaused) {
+                    if (infoPlayerProvider.getTrackInfo().id === '')
+                        infoPlayerProvider.firstPlay(view.webContents)
+                    mediaControl.playPauseTrack(view)
+                }
+                break
+
             case 'media-track-next':
                 mediaControl.nextTrack(view)
                 break

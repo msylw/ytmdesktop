@@ -60,8 +60,8 @@ class Mpris {
             quit: () => process.exit(0),
             previous: 'media-track-previous',
             next: 'media-track-next',
-            pause: 'media-play-pause',
-            play: 'media-play-pause',
+            pause: 'media-pause',
+            play: 'media-play',
             playpause: 'media-play-pause', //KDE Connect only sends this event it looked like.
         }
 
