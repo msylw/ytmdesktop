@@ -33,7 +33,7 @@
         "@types/electron": "^1.6.10",
         "electron": "^22.0.2",
         "electron-builder": "^22.9.1",
-        "electron-rebuild": "^2.3.4",
+        "electron-rebuild": "^3.2.8",
         "husky": "^4.3.7",
         "nodemon": "^2.0.7",
         "prettier": "^2.2.1",
