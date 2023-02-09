@@ -50,6 +50,9 @@ const { commit_hash } = require('./commit_hash')
 /* Variables =========================================================================== */
 const defaultUrl = 'https://music.youtube.com'
 
+const isFlatpak =
+    process.platform === 'linux' && process.env.FLATPAK_HOST === '1'
+
 let mainWindow,
     view,
     miniplayer,
@@ -2000,7 +2003,7 @@ else {
                 tray.updateImage(payload)
         })
 
-        if (!isDev) {
+        if (!isDev && isFlatpak === false) {
             updater.checkUpdate(mainWindow, view)
 
             setInterval(() => {
